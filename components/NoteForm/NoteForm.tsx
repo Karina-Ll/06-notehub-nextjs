@@ -44,8 +44,11 @@ export default function NoteForm({ onCancel }: NoteFormProps) {
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={(values, { setSubmitting }) => {
-        createMutation.mutate(values);
-        setSubmitting(false);
+        createMutation.mutate(values, {
+          onSettled: () => {
+            setSubmitting(false);
+          },
+        });
       }}
     >
       {({ isSubmitting }) => (
