@@ -9,7 +9,7 @@ import Modal from "../../components/Modal/Modal";
 import NoteForm from "../../components/NoteForm/NoteForm";
 import Pagination from "../../components/Pagination/Pagination";
 import SearchBox from "../../components/SearchBox/SearchBox";
-import css from "./notes.module.css";
+import css from "./NotesPage.module.css";
 
 export default function NotesClient() {
   const [page, setPage] = useState(1);
